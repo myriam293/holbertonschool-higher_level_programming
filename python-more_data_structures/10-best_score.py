@@ -10,4 +10,3 @@ def best_score(a_dictionary):
             big = v
             ret = k
     return (ret)
-    
