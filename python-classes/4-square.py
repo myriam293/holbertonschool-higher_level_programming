@@ -1,9 +1,17 @@
+#!/usr/bin/python3
+"""This module defines a Square class with size validation and area calculation."""
+
+
 class Square:
     """Represents a square with size validation and area computation."""
 
     def __init__(self, size=0):
-        """Initialize a new Square."""
-        self.size = size  # use setter for validation
+        """Initialize a new Square.
+
+        Args:
+            size (int): Size of the square.
+        """
+        self.size = size
 
     @property
     def size(self):
@@ -12,7 +20,15 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Set the size of the square, with validation."""
+        """Set the size of the square.
+
+        Args:
+            value (int): The new size, must be an int >= 0.
+
+        Raises:
+            TypeError: If value is not an int.
+            ValueError: If value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
