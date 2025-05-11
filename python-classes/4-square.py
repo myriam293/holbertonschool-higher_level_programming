@@ -1,22 +1,27 @@
 #!/usr/bin/python3
-"""This module defines a function to replace an element in a copied list."""
+"""This module defines a Square class with validated size and area method."""
 
 
-def new_in_list(my_list, idx, element):
-    """Replace an element in a copied list at a specific position.
+class Square:
+    """Represents a square with size validation and area computation."""
 
-    Args:
-        my_list (list): The original list.
-        idx (int): The index to replace.
-        element (any): The new element to insert.
+    def __init__(self, size=0):
+        """Initialize a new Square.
 
-    Returns:
-        list: A new list with the element replaced if index is valid;
-              otherwise, the original list unchanged.
-    """
-    if idx < 0 or idx >= len(my_list):
-        return my_list
+        Args:
+            size (int): Size of the square, must be an integer >= 0.
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
-    copy = my_list.copy()
-    copy[idx] = element
-    return copy
+    def area(self):
+        """Return the area of the square."""
+        return self.__size * self.__size
+
+    @property
+    def size(self):
+        """Get the current size of the square."""
+        return self.__size
