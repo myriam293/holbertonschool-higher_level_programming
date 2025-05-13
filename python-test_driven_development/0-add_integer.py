@@ -2,7 +2,7 @@
 """This module provides a function to add two integers."""
 
 
-def add_integer(a, b=98):
+def add_integer(a, b):
     """Return the integer addition of a and b.
 
     Args:
@@ -15,7 +15,6 @@ def add_integer(a, b=98):
     Returns:
         int: The sum of a and b as an integer.
     """
-def add_integer(a, b=98):
     if type(a)!= int and type(a)!= float:
         raise TypeError("a must be an integer")
     if type(b)!= int and type(b)!= float:
