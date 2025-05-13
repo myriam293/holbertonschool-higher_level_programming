@@ -2,7 +2,7 @@
 """This module provides a function to add two integers."""
 
 
-def add_integer(a, b):
+def add_integer(a, b=98):
     """Return the integer addition of a and b.
 
     Args:
