@@ -1,1 +1,47 @@
-#!/usr/bin/python3
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello. My name is Theo.")
+Hello.
+<BLANKLINE>
+My name is Theo.
+<BLANKLINE>
+
+>>> text_indentation("What? Really: Yes.")
+What?
+<BLANKLINE>
+Really:
+<BLANKLINE>
+Yes.
+<BLANKLINE>
+
+>>> text_indentation("This is weird .  Spaces ? Too many : right.")
+This is weird.
+<BLANKLINE>
+Spaces?
+<BLANKLINE>
+Too many:
+<BLANKLINE>
+right.
+<BLANKLINE>
+
+>>> text_indentation("Text with no punctuation at all")
+Text with no punctuation at all
+
+>>> text_indentation("   Leading spaces.  And trailing too ?   Yes :of course.")
+Leading spaces.
+<BLANKLINE>
+And trailing too?
+<BLANKLINE>
+Yes:
+<BLANKLINE>
+of course.
+<BLANKLINE>
+
+>>> text_indentation(42)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
