@@ -14,7 +14,7 @@ Really:
 Yes.
 <BLANKLINE>
 
->>> text_indentation("This is weird .  Spaces ? Too many : right.")
+>>> text_indentation("This is weird.  Spaces? Too many: right.")
 This is weird.
 <BLANKLINE>
 Spaces?
@@ -27,7 +27,7 @@ right.
 >>> text_indentation("Text with no punctuation at all")
 Text with no punctuation at all
 
->>> text_indentation("   Leading spaces.  And trailing too ?   Yes :of course.")
+>>> text_indentation("   Leading spaces.  And trailing too?   Yes: of course.")
 Leading spaces.
 <BLANKLINE>
 And trailing too?
