@@ -14,15 +14,18 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    result = ""
     buffer = ""
 
     for char in text:
         if char in ".?:":
+            # print stripped buffer + punctuation
             print(buffer.strip() + char)
             print()
             buffer = ""
         else:
             buffer += char
 
+    # Print remaining buffer if any
     if buffer.strip():
         print(buffer.strip())
