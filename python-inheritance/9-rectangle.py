@@ -4,10 +4,15 @@ inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)"
 
 
 class Rectangle(BaseGeometry):
-    """ Class that defines a rectangle from BaseGeometry Class """
+    """ Represent base geometry."""
 
     def __init__(self, width, height):
-        """ Initializes instance """
+        """Intialize a new Rectangle.
+
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+        """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
