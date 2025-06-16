@@ -1,29 +1,7 @@
 #!/usr/bin/python3
-"""Write a class Rectangle that is a subclass of
-BaseGeometry (7-base_geometry.py)."""
+"""Write a class Rectangle that inherits from BaseGeometry."""
 
-
-class BaseGeometry:
-    """Represent base geometry."""
-
-    def area(self):
-        """Not yet implemented."""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """Validate a parameter as an integer.
-
-        Args:
-            name (str): The name of the parameter.
-            value (int): The parameter to validate.
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is <= 0.
-        """
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+from 7-base_geometry import BaseGeometry
 
 
 class Rectangle(BaseGeometry):
