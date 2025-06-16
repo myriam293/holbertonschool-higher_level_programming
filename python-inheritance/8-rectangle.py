@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Write a class Rectangle that inherits
-from BaseGeometry (7-base_geometry.py)."""
+"""Write a class Rectangle that is a subclass of
+BaseGeometry (7-base_geometry.py)."""
 
 
 class BaseGeometry:
