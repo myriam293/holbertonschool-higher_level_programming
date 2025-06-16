@@ -1,96 +1,22 @@
 #!/usr/bin/python3
-"""Write a class Square that inherits
-from Rectangle (9-rectangle.py).
-(task based on 10-square.py).
-"""
+"""Define a class Square that inherits from Rectangle."""
+
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class BaseGeometry:
-    """Reprsent base geometry."""
+class Square(Rectangle):
+    """Represent a square."""
 
-    def area(self):
-        """Not yet implemented."""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """Validate a parameter as an integer.
+    def __init__(self, size):
+        """Initialize a new square.
 
         Args:
-            name (str): The name of the parameter.
-            value (int): The parameter to validate.
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is <= 0.
+            size (int): Size of the square's side.
         """
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
-
-
-class Rectangle(BaseGeometry):
-    """Represent a rectangle using BaseGeometry."""
-
-    def __init__(self, width, height):
-        """Intialize a new Rectangle.
-
-        Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
-        """
-        self.integer_validator("width", width)
-        self.__width = width
-        self.integer_validator("height", height)
-        self.__height = height
-
-
-class Rectangle(BaseGeometry):
-    """ Represent base geometry."""
-
-    def __init__(self, width, height):
-        """Intialize a new Rectangle.
-
-        Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
-        """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
-    def area(self):
-        """ Method that returns the area of the instance"""
-        return self.__width * self.__height
+        self.integer_validator("size", size)
+        super().__init__(size, size)
+        self.__size = size
 
     def __str__(self):
-        """ Special method that returns the printable string """
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
-
-
-class Square(Rectangle):
-    """Represent a square."""
-
-    def __init__(self, size):
-        """Initialize a new square.
-
-        Args:
-            size (int): The size of the new square.
-        """
-        self.integer_validator("size", size)
-        super().__init__(size, size)
-        self.__size = size
-
-
-class Square(Rectangle):
-    """Represent a square."""
-
-    def __init__(self, size):
-        """Initialize a new square.
-
-        Args:
-            size (int): The size of the new square.
-        """
-        self.integer_validator("size", size)
-        super().__init__(size, size)
-        self.__size = size
+        """Return the square description."""
+        return "[Square] {:d}/{:d}".format(self.__size, self.__size)
