@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Write a class Rectangle that
-inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)"""
+inherits from BaseGeometry (7-base_geometry.py).
+(task based on 8-rectangle.py)"""
 
 
 class BaseGeometry:
@@ -25,6 +26,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """Represent a rectangle using BaseGeometry."""
 
@@ -39,6 +41,7 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
+
 
 class Rectangle(BaseGeometry):
     """ Represent base geometry."""
