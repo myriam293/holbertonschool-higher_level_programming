@@ -21,6 +21,10 @@ class Shape(ABC):
 class Circle(Shape):
     """The Circle class inherited from Shape"""
 
+    def __init__(self, radius):
+        """Initialization wih radius"""
+        self.radius = abs(radius)
+
     def area(self):
         """Returning duck area"""
         return pi * self.radius ** 2
@@ -52,6 +56,3 @@ def shape_info(obj):
 
     area = obj.area()
     perimeter = obj.perimeter()
-
-    print(f"Area: {area}")
-    print(f"Perimeter: {perimeter}")
