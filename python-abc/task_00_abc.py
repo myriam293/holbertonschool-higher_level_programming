@@ -16,3 +16,10 @@ class Dog(Animal):
     def sound(self):
         """Dog goes Bark"""
         return "Bark"
+
+
+class Cat(Animal):
+    """Cat class Inherited from Animal"""
+    def sound(self):
+        """Cat goes Meow"""
+        return "Meow"
