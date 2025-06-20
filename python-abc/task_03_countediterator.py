@@ -11,11 +11,6 @@ class CountedIterator:
         """Initialize the iterator object using iter() and a counter
         to track the number of items iterated."""
         self.iterator = iter(iterable)
-        self.counter = 0
-
-    def __iter__(self):
-        """Return the iterator object (self)."""
-        return self
 
     def __next__(self):
         """Increment the counter each time an item is fetched
@@ -23,3 +18,7 @@ class CountedIterator:
         item = next(self.iterator)
         self.counter += 1
         return item
+
+    def get_count(self):
+        """Return the current value of the counter."""
+        return self.counter
