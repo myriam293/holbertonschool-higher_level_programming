@@ -21,11 +21,3 @@ class VerboseList(list):
         """Print a message when an item is removed using remove."""
         print(f"Removed [{value}] from the list.")
         super().remove(value)
-
-    def pop(self, value=None):
-        """Print a message when an item is removed using pop."""
-        if value is None:
-            item = super().pop()
-        else:
-            item = super().pop(value)
-        print(f"Popped [{item}] from the list.")
