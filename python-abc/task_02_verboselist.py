@@ -29,4 +29,3 @@ class VerboseList(list):
         else:
             item = super().pop(value)
         print(f"Popped [{item}] from the list.")
-        return item
