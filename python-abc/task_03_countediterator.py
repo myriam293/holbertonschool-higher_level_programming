@@ -17,7 +17,6 @@ class CountedIterator:
         and return the next item from the iterator."""
         item = next(self.iterator)
         self.counter += 1
-        return item
 
     def get_count(self):
         """Return the current value of the counter."""
