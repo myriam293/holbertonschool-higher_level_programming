@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Write a class Student that defines a student by public attributes and methods."""
+"""Write a class Student that defines a
+student by public attributes and methods."""
 
 
 class Student:
