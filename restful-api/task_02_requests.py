@@ -29,4 +29,15 @@ def fetch_and_save_posts():
         posts = response.json()
         filename = 'posts.csv'
 
+        with open(filename, 'w', encoding='UTF-8') as file:
+            writer = csv.DictWriter(file, fieldnames=['id', 'title', 'body'])
+            writer.writeheader()
 
+            for post in posts:
+                writer.writerow({
+                    'id': post.get('id'),
+                    'title': post.get('title'),
+                    'body': post.get('body')
+                })
+    else:
+        print("Request was not successful.")
