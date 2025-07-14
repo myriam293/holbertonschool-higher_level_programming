@@ -51,4 +51,6 @@ def get_user(username):
     return jsonify(users[username])
 
 
-
+if __name__ == "__main__":
+    """Run the Flask development server"""
+    app.run()
