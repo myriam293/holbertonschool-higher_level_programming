@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Module to implement secure API with basic and JWT authentication"""
-
+"""Flask API demonstrating Basic and JWT-based authentication"""
 
 from flask import Flask, jsonify, request
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -11,9 +10,12 @@ from flask_jwt_extended import (
 )
 
 app = Flask(__name__)
+
 app.config['SECRET_KEY'] = 'superincredibleamazingsecretkey'
+
 auth = HTTPBasicAuth()
 jwt = JWTManager(app)
+
 
 users = {
     "user1": {
@@ -49,12 +51,14 @@ def login():
     username = data.get('username')
     password = data.get('password')
     user = users.get(username)
+
     if user and check_password_hash(user['password'], password):
         access_token = create_access_token(identity={
             'username': username,
             'role': user['role']
         })
         return jsonify(access_token=access_token)
+
     return jsonify({"error": "Invalid credentials"}), 401
 
 
@@ -84,16 +88,19 @@ def handle_invalid_token_error(err):
 
 
 @jwt.expired_token_loader
-def handle_expired_token_error(jwt_header, jwt_data):
+def handle_expired_token_error(err, err2):
     return jsonify({"error": "Token has expired"}), 401
 
 
 @jwt.revoked_token_loader
-def handle_revoked_token_error(jwt_header, jwt_data):
+def handle_revoked_token_error(jwt_header, jwt_payload):
     return jsonify({"error": "Token has been revoked"}), 401
 
 
 @jwt.needs_fresh_token_loader
-def handle_needs_fresh_token_error(jwt_header, jwt_data):
+def handle_needs_fresh_token_error(jwt_header, jwt_payload):
     return jsonify({"error": "Fresh token required"}), 401
 
+
+if __name__ == "__main__":
+    app.run()
