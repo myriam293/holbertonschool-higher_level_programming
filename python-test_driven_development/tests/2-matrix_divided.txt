@@ -61,3 +61,13 @@ ValueError: could not convert string to float: 'strimh'
 Traceback (most recent call last):
     ...
 NameError: name 'test' is not defined
+
+>>> matrix_divided([[1,2],[float(hhhhhhh), 3]],float(test))
+Traceback (most recent call last):
+    ...
+NameError: name 'hhhhhhh' is not defined
+
+>>> matrix_divided([[1,2],[float(nan), 3]],float(test))
+Traceback (most recent call last):
+    ...
+NameError: name 'nan' is not defined
