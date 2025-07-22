@@ -178,3 +178,6 @@ TypeError: a must be an integer
 
 >>> add_integer(1.1, 2.1)
 3
+
+>>> add_integer(True, 2)
+3
