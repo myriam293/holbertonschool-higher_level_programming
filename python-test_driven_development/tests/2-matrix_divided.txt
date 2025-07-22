@@ -2,6 +2,7 @@
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 >>> matrix = [[1, 2, 3], [4, 5, 6]]
+
 >>> matrix_divided(matrix, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
@@ -43,3 +44,9 @@ ZeroDivisionError: division by zero
 
 >>> matrix_divided([[2, 4], [6, 8]], -2)
 [[-1.0, -2.0], [-3.0, -4.0]]
+
+
+>>> matrix_divided([2, 3], [5, 4], "strimh")
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() takes 2 positional arguments but 3 were given
