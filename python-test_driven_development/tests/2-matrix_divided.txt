@@ -71,3 +71,5 @@ NameError: name 'hhhhhhh' is not defined
 Traceback (most recent call last):
     ...
 NameError: name 'nan' is not defined
+
+>>> matrix_divided([[1,2],[float(nan), 3]],)
