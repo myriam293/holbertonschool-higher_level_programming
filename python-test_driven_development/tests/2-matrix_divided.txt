@@ -57,5 +57,7 @@ Traceback (most recent call last):
 ValueError: could not convert string to float: 'strimh'
 
 
->>> matrix_divided([[1,2],[2, 3]],float(5))
-[[0.2, 0.4], [0.4, 0.6]]
+>>> matrix_divided([[1,2],[2, 3]],float(test))
+Traceback (most recent call last):
+    ...
+ NameError: name 'test' is not defined
