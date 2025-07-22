@@ -76,3 +76,8 @@ NameError: name 'nan' is not defined
 Traceback (most recent call last):
     ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided([[]],)
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
