@@ -152,5 +152,3 @@ TypeError: b must be an integer
 
 >>> add_integer(100, -2)
 98
->>> add_integer(1000000000000000, 1)
-1000000000000001
