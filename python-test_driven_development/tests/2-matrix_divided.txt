@@ -50,3 +50,8 @@ ZeroDivisionError: division by zero
 Traceback (most recent call last):
     ...
 TypeError: matrix_divided() takes 2 positional arguments but 3 were given
+
+>>> matrix_divided([2, 3], [5, 4], float("strimh"))
+Traceback (most recent call last):
+    ...
+ValueError: could not convert string to float: 'strimh'
