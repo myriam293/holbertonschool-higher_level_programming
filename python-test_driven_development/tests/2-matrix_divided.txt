@@ -103,3 +103,8 @@ TypeError: div must be a number
 Traceback (most recent call last):
     ...
 SyntaxError: invalid syntax
+
+>>> matrix_divided([[1,2],[2, float(qqqqqqqq)]],4)
+Traceback (most recent call last):
+    ...
+NameError: name 'qqqqqqqq' is not defined
