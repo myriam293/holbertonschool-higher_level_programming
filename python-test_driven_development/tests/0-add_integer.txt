@@ -165,3 +165,8 @@ TypeError: a must be an integer
 
 >>> add_integer(-100, -2)
 -102
+
+>>> add_integer("hello", "test")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
