@@ -162,3 +162,6 @@ NameError: name 'nan' is not defined
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
+>>> add_integer(-100, -2)
+-102
