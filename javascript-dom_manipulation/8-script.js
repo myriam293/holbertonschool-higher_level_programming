@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('https://hellosalut.stefanbohacek.dev/?lang=fr')
+    fetch('https://stefanbohacek.com/hellosalut/?lang=fr')
         .then((response) => response.json())
         .then((data) => {
             const helloContent = document.getElementById('hello');
