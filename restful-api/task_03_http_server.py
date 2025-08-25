@@ -48,3 +48,11 @@ class HTTPHandler(http.server.BaseHTTPRequestHandler):
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write("Endpoint not found".encode('utf-8'))
+
+
+if __name__ == '__main__':
+    """Start the HTTP server on port 8000"""
+    server_address = ('', 8000)
+    httpd = http.server.HTTPServer(server_address, HTTPHandler)
+    print("Starting server at http://localhost:8000")
+    httpd.serve_forever()
