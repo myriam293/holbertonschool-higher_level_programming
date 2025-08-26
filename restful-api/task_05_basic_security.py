@@ -44,6 +44,14 @@ def verify_password(username, password):
 def basic_protected():
     return "Basic Auth: Access Granted"
 
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+    user = users.get(username)
+
     if user and check_password_hash(user['password'], password):
         access_token = create_access_token(identity={
             'username': username,
