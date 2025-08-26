@@ -49,3 +49,7 @@ def get_user(username):
     if username not in users:
         return jsonify({'error': 'User not found'}), 404
     return jsonify(users[username])
+
+
+if __name__ == "__main__":
+    """Run the Flask development server"""
