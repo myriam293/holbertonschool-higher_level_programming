@@ -53,3 +53,4 @@ def get_user(username):
 
 if __name__ == "__main__":
     """Run the Flask development server"""
+    app.run()
