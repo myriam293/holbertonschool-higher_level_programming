@@ -36,6 +36,13 @@ def add_user():
     users[user['username']] = user
     return jsonify({'message': 'User added', 'user': user}), 201
 
+
+@app.route('/status')
+def status():
+    """Simple health check endpoint"""
+    return 'OK'
+
+
 @app.route('/users/<username>')
 def get_user(username):
     """Returns user info for a given username, or error if not found"""
