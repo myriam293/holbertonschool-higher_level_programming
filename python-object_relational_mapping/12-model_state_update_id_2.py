@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Fetches all City objects 
+Fetches all City objects
 from the database and prints
 them with their State.
 """
