@@ -6,9 +6,9 @@ them with their State.
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_city import Base, City
-from model_state import State
 from sys import argv
+
+from model_state import Base, State
 
 if __name__ == "__main__":
 
@@ -20,14 +20,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = (
-        session.query(State, City)
-        .join(City, State.id == City.state_id)
-        .order_by(City.id)
-        .all())
-
-    for state, city in query:
-        print("{}: ({}) {}".format(state.name, city.id, city.name))
+    session.query(State).filter(State.id == 2).update({"name": "New Mexico"})
+    session.commit()
 
     if session:
         session.close()
