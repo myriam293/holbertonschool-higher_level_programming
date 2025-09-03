@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Fetches all City objects from the database and prints them with their State."""
+"""
+Fetches all City objects 
+from the database and prints
+them with their State.
+"""
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
