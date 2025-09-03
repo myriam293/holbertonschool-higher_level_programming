@@ -4,7 +4,6 @@ Fetches all City objects
 from the database and prints
 them with their State.
 """
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_city import Base, City
